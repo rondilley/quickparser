@@ -1,0 +1,83 @@
+$Id: README,v 1.2 2009/03/12 06:58:23 rdilley Exp $
+=== QuickParser (quickparser)
+
+by Ron Dilley <ron.dilley@uberadmin.com>
+
+For the latest information on logstore, please see:
+http://www.uberadmin.com/Projects/quickparser/
+
+== What is QuickParser?
+
+QuickParser is a fast, non-regex log parser.  The first
+version includes a default template for Juniper (Netscreen)
+stype key=value logs.  I will release the full version with
+configurable templates some time in the future if my
+co-conspiritor does not get the lead out and get his version
+done and released.  By fast I am talking 2.6M lines per
+minute on a single processor 2.5GHz PC running linux and 950K
+lines per minute on a SunBlade 2000 with 1GHz processors.
+
+The output is pseudo-XML.  As my partner in crime describes
+it, the format is enough like XML to piss off the XML haters
+and far enough from the standard to piss off the XML lovers.
+
+== Why use it?
+
+Quick parser is a handy tool to normalize firewall logs.  We
+use it to push logs into an analysis tool called overwatch.
+It is really fast, which makes all the difference in the world
+when you are pushing days and weeks of logs into your data
+analysis tools.
+
+== Implimentation
+
+To use Quick Parser pass your log data filename as an
+argument to quickparser and pipe the output to a file or
+let it all stream to standard out.  Here is an example of
+the output:
+
+<rec>
+<time>Aug 31 01:00:22</time>
+<NetScreen device_id>sec2-fw</NetScreen device_id>
+<Root>system-notification-00257</Root>
+<start_time>"2007-08-31 07:00:22"</start_time>
+<duration>0</duration>
+<policy_id>873861</policy_id>
+<service>NETBIOS</service>
+<proto>17</proto>
+<src zone>Untrust</src zone>
+<dst zone>DMZ1</dst zone>
+<action>Deny</action>
+<sent>0</sent>
+<rcvd>0</rcvd>
+<src>172.10.10.10</src>
+<dst>10.10.10.10</dst>
+<src_port>35775</src_port>
+<dst_port>137</dst_port>
+<session_id>0</session_id>
+</rec>
+
+== Security Implications
+
+Assume that there are errors in the psmd source that
+would allow a specially crafted packet to allow an attacker
+to exploit psmd to gain access to the computer that psmd is
+running on!!!  psmd tries to get rid of priviledges it does
+not need and can run in a chroot environment.  I recommend
+that you use the chroot and uid/gid options.  They are there
+to compensate for my poor programming skills.  Don't trust
+this software and install and use is at your own risk.
+
+== Bugs
+
+I am not a programmer by any strech of the imagination.  I
+have attempted to remove the obvious bugs and other
+programmer related errors but please keep in mind the first
+sentence.  If you find an issue with code, please send me
+an e-mail with details and I will be happy to look into
+it.
+
+Ron Dilley
+ron.dilley@uberadmin.com
+
+

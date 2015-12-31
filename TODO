@@ -1,0 +1,10 @@
+Quick Parser (quickparser) TODO list
+==============
+
+Short-term:
+-----------
+* put the tokenizer code back into the source tree 
+
+Long-term:
+----------
+* build GUI tool for configuring new token patterns

@@ -1,0 +1,17 @@
+2007-07-10  Ron Dilley <ron.dilley@uberadmin.com>
+
+	* Initial public release.
+
+2008-07-10  Ron Dilley <ron.dilley@uberadmin.com>
+
+	* Added log parsing templates
+
+2009-03-11  Ron Dilley <ron.dilley@uberadmin.com>
+
+	* Minor parser fixes to improve flexibility
+
+2011-07-29  Ron Dilley <ron.dilley@uberadmin.com>
+
+	* Added some bounds checking
+	* Fixed several bugs
+	* Minor improvements to the parser

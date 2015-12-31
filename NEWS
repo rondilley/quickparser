@@ -1,0 +1,18 @@
+Version 0.2 (July 10, 2007):
+
+* First public release.
+
+Version 0.3 (September 3, 2008):
+
+* Released updated version of the parser
+* Minor bug fixes and performance improvements
+* Template code re-inserted
+
+Version 0.4 (March 11, 2009):
+
+* Minor updates to the parser
+
+Version 0.5 (July 29, 2011):
+
+* Bug fixes and more paranoid bounds checking
+* Minor performance and parser improvements
