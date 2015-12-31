@@ -1,10 +1,10 @@
 dnl Process this file with autoconf to produce a configure script
-AC_PREREQ(2.59)
-AC_INIT
+m4_include([version.m4])
+AC_PREREQ([2.59])
+AC_INIT([QuickParser], VERSION_NUMBER, [ron.dilley@uberadmin.com], [quickparser], [http://www.uberadmin.com/Projects/quickparser/])
 AC_CONFIG_SRCDIR(src/main.c)
 AC_CONFIG_AUX_DIR(config)
-. $srcdir/version.sh
-AM_INIT_AUTOMAKE(quickparser, $VERSION_NUMBER)
+AM_INIT_AUTOMAKE
 
 dnl Checks for programs
 AC_PROG_CC
